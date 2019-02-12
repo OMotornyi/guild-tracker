@@ -143,6 +143,6 @@ def get_arena_squad(config, ally_codes):
 d2 = api_swgoh_players(CONFIG,{
         'structure':True,
         'language': 'eng_us',
-        'allycodes': [ 928428534 ],
+        'allycodes': [ 1111111 ],
 })
 print(json.dumps(d2, indent=4))
