@@ -1,0 +1,356 @@
+[
+    {
+        "roster": [
+            {
+                "name": "JAYBIRD",
+                "allyCode": 695141142,
+                "gp": 3801844,
+                "gpChar": 2275839,
+                "gpShip": 1526005
+            },
+            {
+                "name": "Guybrush Treepwood",
+                "allyCode": 816994263,
+                "gp": 4010009,
+                "gpChar": 2469441,
+                "gpShip": 1540568
+            },
+            {
+                "name": "LordShetHad",
+                "allyCode": 628576445,
+                "gp": 4468918,
+                "gpChar": 2659869,
+                "gpShip": 1809049
+            },
+            {
+                "name": "Lossberg",
+                "allyCode": 928428534,
+                "gp": 3073229,
+                "gpChar": 1874988,
+                "gpShip": 1198897
+            },
+            {
+                "name": "dankatomi",
+                "allyCode": 788297363,
+                "gp": 4288321,
+                "gpChar": 2582577,
+                "gpShip": 1705744
+            },
+            {
+                "name": "Mitth'raw'nuruodo",
+                "allyCode": 545755536,
+                "gp": 3695745,
+                "gpChar": 2287264,
+                "gpShip": 1408481
+            },
+            {
+                "name": "RubixSquare",
+                "allyCode": 496346589,
+                "gp": 3876290,
+                "gpChar": 2255252,
+                "gpShip": 1621038
+            },
+            {
+                "name": "TT",
+                "allyCode": 559256917,
+                "gp": 3813354,
+                "gpChar": 2339429,
+                "gpShip": 1473925
+            },
+            {
+                "name": "Cabeiri",
+                "allyCode": 255292591,
+                "gp": 3803562,
+                "gpChar": 2217419,
+                "gpShip": 1587093
+            },
+            {
+                "name": "Fogan Mex",
+                "allyCode": 235853533,
+                "gp": 3150228,
+                "gpChar": 1957120,
+                "gpShip": 1193108
+            },
+            {
+                "name": "Sicasni",
+                "allyCode": 927627925,
+                "gp": 4069268,
+                "gpChar": 2396706,
+                "gpShip": 1672562
+            },
+            {
+                "name": "TheT",
+                "allyCode": 916244375,
+                "gp": 3726126,
+                "gpChar": 2277949,
+                "gpShip": 1448177
+            },
+            {
+                "name": "A thorny",
+                "allyCode": 445977549,
+                "gp": 3689837,
+                "gpChar": 2240502,
+                "gpShip": 1449335
+            },
+            {
+                "name": "Andruil",
+                "allyCode": 847234879,
+                "gp": 3970018,
+                "gpChar": 2290516,
+                "gpShip": 1679502
+            },
+            {
+                "name": "JG10117",
+                "allyCode": 492931655,
+                "gp": 3697008,
+                "gpChar": 2299598,
+                "gpShip": 1397410
+            },
+            {
+                "name": "Drak Pav",
+                "allyCode": 516962186,
+                "gp": 3283936,
+                "gpChar": 2112780,
+                "gpShip": 1171156
+            },
+            {
+                "name": "Egbert Wilson",
+                "allyCode": 815876293,
+                "gp": 4032077,
+                "gpChar": 2466369,
+                "gpShip": 1565708
+            },
+            {
+                "name": "Mattco",
+                "allyCode": 877412173,
+                "gp": 4292734,
+                "gpChar": 2621122,
+                "gpShip": 1671612
+            },
+            {
+                "name": "ManibaLector",
+                "allyCode": 493234764,
+                "gp": 3525987,
+                "gpChar": 2173193,
+                "gpShip": 1353646
+            },
+            {
+                "name": "Filan",
+                "allyCode": 136448836,
+                "gp": 4360685,
+                "gpChar": 2628642,
+                "gpShip": 1732043
+            },
+            {
+                "name": "Agasfer",
+                "allyCode": 371347778,
+                "gp": 3009697,
+                "gpChar": 1826061,
+                "gpShip": 1183636
+            },
+            {
+                "name": "P600",
+                "allyCode": 647841892,
+                "gp": 3271236,
+                "gpChar": 2097771,
+                "gpShip": 1173465
+            },
+            {
+                "name": "3aBXo3",
+                "allyCode": 271893536,
+                "gp": 3051682,
+                "gpChar": 1897717,
+                "gpShip": 1153965
+            },
+            {
+                "name": "jt",
+                "allyCode": 719121629,
+                "gp": 3888612,
+                "gpChar": 2468536,
+                "gpShip": 1420145
+            },
+            {
+                "name": "REBEL GHOST",
+                "allyCode": 983835644,
+                "gp": 4018092,
+                "gpChar": 2427339,
+                "gpShip": 1590753
+            },
+            {
+                "name": "Tee",
+                "allyCode": 553651694,
+                "gp": 4313564,
+                "gpChar": 2566656,
+                "gpShip": 1752539
+            },
+            {
+                "name": "Tijack",
+                "allyCode": 555735219,
+                "gp": 3411242,
+                "gpChar": 1992841,
+                "gpShip": 1418401
+            },
+            {
+                "name": "DarthFinnegan",
+                "allyCode": 978136293,
+                "gp": 3672350,
+                "gpChar": 2248988,
+                "gpShip": 1423362
+            },
+            {
+                "name": "Skye Kija",
+                "allyCode": 449964212,
+                "gp": 4070846,
+                "gpChar": 2491962,
+                "gpShip": 1578884
+            },
+            {
+                "name": "ziglet",
+                "allyCode": 537433231,
+                "gp": 4040150,
+                "gpChar": 2403719,
+                "gpShip": 1636431
+            },
+            {
+                "name": "Viper",
+                "allyCode": 319799937,
+                "gp": 3168371,
+                "gpChar": 1909873,
+                "gpShip": 1258617
+            },
+            {
+                "name": "JamesAgain",
+                "allyCode": 722561985,
+                "gp": 3931373,
+                "gpChar": 2437531,
+                "gpShip": 1493842
+            },
+            {
+                "name": "Maurosanero",
+                "allyCode": 426452196,
+                "gp": 3778750,
+                "gpChar": 2287578,
+                "gpShip": 1491172
+            },
+            {
+                "name": "Dani",
+                "allyCode": 257592786,
+                "gp": 3702612,
+                "gpChar": 2238530,
+                "gpShip": 1464129
+            },
+            {
+                "name": "Quico Galante RIP Stan Lee",
+                "allyCode": 333371847,
+                "gp": 4025136,
+                "gpChar": 2437599,
+                "gpShip": 1588508
+            },
+            {
+                "name": "Tupacca",
+                "allyCode": 963385574,
+                "gp": 3608232,
+                "gpChar": 2242830,
+                "gpShip": 1365402
+            },
+            {
+                "name": "DarthDarthBinks",
+                "allyCode": 475822284,
+                "gp": 3364825,
+                "gpChar": 2112253,
+                "gpShip": 1252909
+            },
+            {
+                "name": "Schultzinator",
+                "allyCode": 335172946,
+                "gp": 4742244,
+                "gpChar": 2842583,
+                "gpShip": 1899661
+            },
+            {
+                "name": "GodfatherWestspeedCST",
+                "allyCode": 984554986,
+                "gp": 4451647,
+                "gpChar": 2718531,
+                "gpShip": 1733116
+            },
+            {
+                "name": "mRsIRgUY",
+                "allyCode": 695729298,
+                "gp": 3067756,
+                "gpChar": 1847847,
+                "gpShip": 1222601
+            },
+            {
+                "name": "AdmiralDeFekt713",
+                "allyCode": 853321116,
+                "gp": 3184089,
+                "gpChar": 1917986,
+                "gpShip": 1266103
+            },
+            {
+                "name": "sabreist",
+                "allyCode": 184147958,
+                "gp": 3675693,
+                "gpChar": 2155968,
+                "gpShip": 1519725
+            },
+            {
+                "name": "Mi Kel",
+                "allyCode": 752376329,
+                "gp": 3911546,
+                "gpChar": 2358792,
+                "gpShip": 1552754
+            },
+            {
+                "name": "TWISTED 6",
+                "allyCode": 567439654,
+                "gp": 3972837,
+                "gpChar": 2351722,
+                "gpShip": 1622709
+            },
+            {
+                "name": "DeathBeforeDishonor",
+                "allyCode": 567228192,
+                "gp": 2940560,
+                "gpChar": 1796342,
+                "gpShip": 1144218
+            },
+            {
+                "name": "Cafi",
+                "allyCode": 299663662,
+                "gp": 3390822,
+                "gpChar": 2077788,
+                "gpShip": 1313034
+            },
+            {
+                "name": "NaTe",
+                "allyCode": 928977297,
+                "gp": 3166320,
+                "gpChar": 2031938,
+                "gpShip": 1134382
+            },
+            {
+                "name": "BelGorth",
+                "allyCode": 939915581,
+                "gp": 3709365,
+                "gpChar": 2123840,
+                "gpShip": 1585525
+            },
+            {
+                "name": "Glensidius",
+                "allyCode": 132911816,
+                "gp": 4714756,
+                "gpChar": 2821569,
+                "gpShip": 1893187
+            },
+            {
+                "name": "Hamja Cugla",
+                "allyCode": 599246493,
+                "gp": 4568323,
+                "gpChar": 2681164,
+                "gpShip": 1887159
+            }
+        ]
+    }
+]
