@@ -1,6 +1,6 @@
 import sqlite3
 from sqlite3 import Error
-def select_gp_for_dif(conn,player_id,date_id):
+def db_query_gp_date(conn,player_id,date_id):
      sql = '''SELECT gpchars,gpships, allycode, name
              FROM gp 
             INNER JOIN update_time on update_time.id = gp.updatetime_id
@@ -11,37 +11,50 @@ def select_gp_for_dif(conn,player_id,date_id):
      cur=conn.cursor()
      cur.execute(sql,[date_id,player_id])
      return cur.fetchone()
-def create_gp(conn,gp):
+def db_insert_gp(conn,gp):
     sql = '''INSERT INTO gp(player_id,updatetime_id,gpships,gpchars)
              VALUES(?,?,?,?)'''
     cur = conn.cursor()
     cur.execute(sql, gp)
     return cur.lastrowid
-def create_timestamp(conn,time):
+def db_insert_timestamp(conn,time):
     sql = '''INSERT INTO update_time(snapshot) VALUES(?)'''
     cur = conn.cursor()
     cur.execute(sql,(time,))
     return cur.lastrowid
-def select_player_id(conn,ally):
+def db_query_player_id(conn,ally):
     cur=conn.cursor()
     cur.execute("SELECT id FROM players WHERE allycode=?",(ally,) )
     return cur.fetchone()[0]
-def check_time(conn,time):
+def db_query_player_id_name(conn,ally):
+    cur=conn.cursor()
+    cur.execute("SELECT id, name FROM players WHERE allycode=?",(ally,) )
+    return cur.fetchone()
+def db_query_all_players_id_name(conn):
+    cur=conn.cursor()
+    cur.execute("SELECT id, name FROM players")
+    return cur.fetchall()
+def db_check_timestamp(conn,time):
     cur=conn.cursor()
     cur.execute("SELECT count(*) FROM update_time WHERE snapshot =?",(time,))
     data=cur.fetchone()[0]
-    if data ==0:
-        return True
-    else:
+    if data==0:
         return False
-def create_player(conn,player):
+    else:
+        return True
+def db_get_timestamp(conn,time):
+    cur=conn.cursor()
+    cur.execute("SELECT count(),id FROM update_time WHERE snapshot =?",(time,))
+    data=cur.fetchone()
+    return data
+def db_insert_player(conn,player):
     #add a player to DB
     sql = '''INSERT INTO players(allycode, name)
              VALUES(?,?)'''
     cur = conn.cursor()
     cur.execute(sql, player)
     return cur.lastrowid
-def check_player(conn,allyC):
+def db_check_player(conn,allyC):
     cur=conn.cursor()
     cur.execute("SELECT count(*) FROM players where allycode =?",(allyC,))
     data=cur.fetchone()[0]
@@ -49,7 +62,7 @@ def check_player(conn,allyC):
         return True
     else:
         return False
-def create_connection(db_file):
+def db_create_connection(db_file):
     """ create a database connection to the SQLite database
         specified by db_file
     :param db_file: database file
@@ -62,7 +75,7 @@ def create_connection(db_file):
         print(e)
  
     return None
-def create_table(conn, create_table_sql):
+def db_create_table(conn, create_table_sql):
     """ create a table from the create_table_sql statement
     :param conn: Connection object
     :param create_table_sql: a CREATE TABLE statement
@@ -73,7 +86,7 @@ def create_table(conn, create_table_sql):
         c.execute(create_table_sql)
     except Error as e:
         print(e)
-def main():
+def create_tables_in_db():
     database = "/home/motornyi/SWGOH_API/second.db"
  
     sql_create_projects_table = """ CREATE TABLE IF NOT EXISTS projects (
@@ -113,7 +126,7 @@ def main():
 
                                     ); """
     # create a database connection
-    conn = create_connection(database)
+    conn = db_create_connection(database)
     with conn:
         # create projects table
 #        create_table(conn, sql_create_projects_table)
@@ -126,10 +139,6 @@ def main():
         # player_id=create_player(conn,player);
         # print(player_id)
         #conn.close()
-        create_table(conn, sql_create_players_table)
-        create_table(conn,sql_create_time_table)
-        create_table(conn,sql_create_gp_table)
-
- 
-if __name__ == '__main__':
-    main()
+        db_create_table(conn, sql_create_players_table)
+        db_create_table(conn,sql_create_time_table)
+        db_create_table(conn,sql_create_gp_table)
