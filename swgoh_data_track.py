@@ -8,7 +8,17 @@ from swgoh_api import *
 from swgoh_db import *
 import sqlite3
 from sqlite3 import Error
-
+def user_input_date():
+    isValid=False
+    while not isValid:
+        guild_update_time = input("Type Date dd/mm/yyyy: ") 
+        try: # strptime throws an exception if the input doesn't match the pattern
+            d1 = datetime.strptime(guild_update_time, "%d/%m/%Y")
+            isValid=True
+        except ValueError:
+            #print (what_error)
+            print ("Try again! dd/mm/yyyy\n")
+    return guild_update_time
 def compare_player_gp (conn,time1, time2,player):
     database = "second.db"
     conn = db_create_connection(database)
@@ -19,8 +29,12 @@ def compare_player_gp (conn,time1, time2,player):
         return
     comp1 = db_query_gp_date(conn,player[0],time1_id[1])  
     comp2 = db_query_gp_date(conn,player[0],time2_id[1])   
-    print(player[1],"Character GP delta:",abs(comp1[0]-comp2[0]),"Ships GP delta:",abs(comp1[1]-comp2[1]))
-    return (comp1,comp2)
+    if (comp1 is not None) and (comp2 is not None):
+        print(player[1],"Character GP delta:",abs(comp1[0]-comp2[0]),"Ships GP delta:",abs(comp1[1]-comp2[1]))
+        return (comp1,comp2)
+    else:
+        return None
+
 def compare_all_guild_gp (conn, time1, time2, to_file):
     all_guild_player=db_query_all_players_id_name(conn)
     if to_file: 
@@ -28,7 +42,7 @@ def compare_all_guild_gp (conn, time1, time2, to_file):
         file.write("%-28s %-10s %-10s \n"%("Name","Characters","Ships"))
     for player in all_guild_player:
         player_gp_dif=compare_player_gp(conn,time1,time2,player)
-        if to_file: 
+        if to_file and (player_gp_dif is not None): 
             file.write("%-28s %10i %10i \n"%(player[1],abs(player_gp_dif[0][0]-player_gp_dif[1][0]),abs(player_gp_dif[0][1]-player_gp_dif[1][1])))
     if to_file: file.close()
     return

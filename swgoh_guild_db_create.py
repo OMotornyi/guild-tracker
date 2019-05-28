@@ -59,10 +59,11 @@ with conn:
     up_time = datetime.fromtimestamp(gp_2[0]['updated']/1000)
         #print(up_time)
     str_up=up_time.strftime('%d/%m/%Y')
+
+    #first we check if the dump to db was already made today
     if check_time(conn,str_up):
-        
-        #print(str_up)
-    
+        #add a new timestamp record to update_time table
+
         timestamp_id=create_timestamp(conn,str_up)
         for x in gp_2[0]['roster']:
             player=(x['allyCode'],x['name'])

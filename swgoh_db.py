@@ -47,6 +47,11 @@ def db_get_timestamp(conn,time):
     cur.execute("SELECT count(),id FROM update_time WHERE snapshot =?",(time,))
     data=cur.fetchone()
     return data
+def db_get_all_times(conn):
+    cur=conn.cursor()
+    cur.execute("SELECT * FROM update_time")
+    data=cur.fetchall()
+    return data
 def db_insert_player(conn,player):
     #add a player to DB
     sql = '''INSERT INTO players(allycode, name)
