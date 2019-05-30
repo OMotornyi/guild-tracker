@@ -103,6 +103,15 @@ def get_guild_members(config, ally_codes):
 
 	return { x['name']: x['roster'] for x in data }
 
+def get_guild_full(config, ally_codes):
+
+	data = api_swgoh_guilds(config, {
+		'language': 'eng_us',
+		'allycodes': ally_codes,
+	})
+
+	return data
+
 def get_player_info(config, ally_codes):
 
 	data = api_swgoh_players(config, {
