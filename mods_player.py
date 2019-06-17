@@ -27,9 +27,9 @@ def all_mods(player,stat,thresh):
                     #break
    # return mod_dic
     return pd.DataFrame.from_dict(row_list) 
-
+allycode=int(input("Please enter the ally code of the player to fetch mods: "))
 #project= {'language': 'eng_us','allycodes':928428534,'enums':True}
-project= {'language': 'ger_de','allycodes':928428534,'enums':True}
+project= {'language': 'eng_us','allycodes':allycode,'enums':True}
 one_payer=api_call(CONFIG, project, '%s/swgoh/players' % SWGOH_HELP)
 
 all_my_mods=all_mods(one_payer[0],"UNITSTATSPEED",(1,10))
