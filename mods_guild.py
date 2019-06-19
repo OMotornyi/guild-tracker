@@ -5,29 +5,8 @@ import numpy as np
 import pandas as pd
 from swgoh_api import *
 from collections import OrderedDict
+from swgoh_stats import all_mods
 
-def all_mods(player):
-    #df_mods=pd.DataFrame(columns=['modId','allyCode','name',"Character","Slot","primary stat",'Tier'])
-    row_list=[]
-    for char in player['roster']:
-        for mod in char['mods']:
-            mod_dic=OrderedDict()
-            mod_dic.update({'id':mod['id'],'allyCode':player['allyCode'],'Name':player['name'],"Character":char['nameKey'],
-                           "Slot":mod['slot'],'tier':mod['tier'],'pips': mod['pips'],'lvl':mod['level'],'set':mod['set'],'primary stat':mod['primaryStat']['unitStat']})
-            
-            for secondary_stat in mod['secondaryStat']:
-                mod_dic.update({secondary_stat['unitStat']:secondary_stat['value']})
-            row_list.append(mod_dic)
-                #    df_mods=df_mods.append(dict(zip(df_mods.columns.to_list(),
-                #                                    [mod['id']player['allyCode'],player['name'],char['nameKey'],mod['slot'],secondary_stat['value'],
-                #                                     mod['tier'],secondary_stat['roll'],
-                #                                     mod['primaryStat']['unitStat']])),ignore_index=True)
-                    #for tr_one in thresh:
-                    #    if secondary_stat['value']>=tr_one: tr_d[tr_one]+=1
-                    #break
-   # return mod_dic
-    return row_list
-    return pd.DataFrame.from_dict(row_list) 
 allycode=int(input("Please enter the ally code of one of the guild's payer: "))
 #project= {'language': 'eng_us','allycodes':928428534,'enums':True}
 #project= {'language': 'eng_us','allycodes':allycode,'enums':True}
